@@ -1,0 +1,12 @@
+GET http://localhost:3001/produtos
+### 
+
+POST http://localhost:3001/produtos
+Content-Type: application/json
+
+{
+    "nome": "Mochila",
+    "marca": "Tilibra",
+    "preco": 155.69
+}
+### 

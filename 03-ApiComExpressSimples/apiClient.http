@@ -1,0 +1,34 @@
+GET http://localhost:3001/eventos
+###
+
+GET http://localhost:3001/eventos/564a5s6dasda
+###
+
+GET http://localhost:3001/eventos/56
+###
+
+POST http://localhost:3001/eventos
+Content-Type: application/json
+
+{
+    "_id": "asdwgfvsd",
+    "nome": "Cinema",
+    "data": "23/04/22"
+}
+###
+
+PUT http://localhost:3001/eventos/asdwgfvsd
+Content-Type: application/json
+
+{
+    "_id": "asdwgfvsd",
+    "nome": "Teatro",
+    "data": "23/05/22"
+}
+###
+
+PATCH http://localhost:3001/eventos
+###
+
+DELETE http://localhost:3001/eventos/asdwgfvsd
+###

@@ -1,0 +1,46 @@
+GET http://localhost:3000/produtos
+###
+
+GET http://localhost:3000/produtos/2
+###
+
+POST http://localhost:3000/produtos
+Content-Type: application/json
+
+{
+    "nome": "Mochila",
+    "marca": "Tilibra",
+    "preco": 685.96
+}
+###
+
+DELETE http://localhost:3000/produtos/2
+###
+
+GET http://localhost:3000/clientes
+###
+
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+    "nome": "Tio Bill",
+    "email": "bill@porteiro.com"
+}
+###
+
+PUT http://localhost:3000/clientes/2
+Content-Type: application/json
+
+{
+    "nome": "Carlos",
+    "email": "c@rlos.com"
+}
+###
+
+PATCH http://localhost:3000/clientes/2
+Content-Type: application/json
+
+{
+    "nome": "Carlo Souza"
+}

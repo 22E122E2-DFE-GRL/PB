@@ -1,0 +1,28 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Notebook",
+      "marca": "Positivo",
+      "preco": 3685.96
+    },
+    {
+      "nome": "Mochila",
+      "marca": "Tilibra",
+      "preco": 685.96,
+      "id": 3
+    }
+  ],
+  "clientes": [
+    {
+      "nome": "Tio Bill",
+      "email": "bill@porteiro.com",
+      "id": 1
+    },
+    {
+      "nome": "Carlo Souza",
+      "email": "c@rlos.com",
+      "id": 2
+    }
+  ]
+}
