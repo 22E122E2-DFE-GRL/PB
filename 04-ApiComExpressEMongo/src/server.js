@@ -10,11 +10,28 @@ const app = express();
 async function dbConnect() {
     await client.connect();
     const db = client.db(dbName);
-    console.log("MongoDB conectado.")
+    // console.log("MongoDB conectado.")
     return db;
 }
 app.db = dbConnect()
 app.use(express.json());
+
+// 
+app.get('/', (req, res) => {
+    res.status(200).json("OK");
+})
+
+app.get('/marcas', (req, res) => {
+    res.status(200).json([])
+})
+
+app.post('/marcas', (req, res) => {
+    app.db
+        .then(conn => conn.collection('marcas').insertOne(res.body))
+        .then(_ => res.status(201).json('Marca cadastrada com sucesso.'))
+        // .catch()
+})
+
 // Listar produtos
 app.get('/produtos', (req, res) => {
     app.db
@@ -22,6 +39,7 @@ app.get('/produtos', (req, res) => {
         .then(produtos => produtos.toArray())
         .then(produtos => res.json(produtos))
 })
+
 // Inserir um novo produto
 app.post('/produtos', (req, res) => {
     // body
@@ -40,7 +58,7 @@ app.get('/produtos/:id', (req, res) => {
         .then(produtos => res.json(produtos))
 })
 
-module.exports = app;
+module.exports = app; // Instância de Express
 
 // app.listen(3000, () => {
 //     console.log("Server on.")

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon",
+    "test": "mocha --recursive --watch"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,9 @@
     "mongoose": "^6.3.2"
   },
   "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.0.0",
     "nodemon": "^2.0.16"
   }
 }
