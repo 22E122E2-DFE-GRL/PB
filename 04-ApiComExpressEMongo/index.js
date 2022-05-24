@@ -1,7 +1,8 @@
 // console.log("Building app...");
 
 const app = require("./src/server");
+const port = 3001
 
-app.listen(3001, () => {
-    console.log("Server on!")
+app.listen(port, () => {
+    console.log(`Server on: ${port}!`)
 })
