@@ -10,3 +10,25 @@ Content-Type: application/json
     "preco": 155.69
 }
 ### 
+
+GET http://localhost:3001/usuarios
+### 
+
+POST http://localhost:3001/usuarios
+Content-Type: application/json
+
+{
+    "nome": "Ciclano",
+    "email": "cicl@no.com",
+    "senha": "654321"
+}
+### 
+
+
+PUT http://localhost:3001/usuarios/628d75edfa9e7f3020794b20
+Content-Type: application/json
+
+{
+    "senha": "654321"
+}
+### 

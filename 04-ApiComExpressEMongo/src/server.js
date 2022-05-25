@@ -22,6 +22,7 @@ require('./middlewares/database.js')
 app.db = mongoose
 app.use(express.json());
 
+// Unindo os arquivos do projeto
 consign()
     .then('./src/middlewares/cors.js') // anexar um arquivo
     .then('./src/api/usuarios.js')

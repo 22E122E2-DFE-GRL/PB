@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+
+    <input type="text" name="nome" id="usuario_nome">
+    <input type="email" name="email" id="usuario_email">
+    <input type="password" name="password" id="usuario_senha">
+    <button id="btn_salvar">Salvar</button>
     <script>
-        fetch("http://localhost:3001/usuarios", {
-            method: "POST"
-        }).then(res => res.json()).then(produtos => console.log(produtos)).catch(e => console.log(e))
+
+        btn_salvar.addEventListener('click', () => {
+            const nome = usuario_nome.value
+            const email = usuario_email.value
+            const senha = usuario_senha.value
+            const usuario = {nome, email, senha}
+            console.log(usuario)
+            fetch("http://localhost:3001/usuarios", {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method: "POST",
+                body: JSON.stringify(usuario)
+            })
+                .then(res => res.json())
+                .then(usuarios => console.log(usuarios))
+                .catch(e => console.log(e))
+        })
+
     </script>
 </body>
+
 </html>

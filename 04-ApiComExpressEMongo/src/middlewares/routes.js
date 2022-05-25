@@ -8,10 +8,10 @@ module.exports = app => {
         .get(app.src.api.usuarios.list)      // listar
         .post(app.src.api.usuarios.save);    // salvar
 
-    /* app.route('/usuarios/:id')
-        .get(() => {})
-        .put(() => {})
-        .delete(() => {}) */
+    app.route('/usuarios/:id')
+        .get(() => {})                       // exibir um
+        .put(app.src.api.usuarios.update)    // atualizar um
+        .delete(() => {})                    // excluir um
 
     /* 
     
