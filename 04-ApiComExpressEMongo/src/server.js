@@ -28,6 +28,7 @@ app.use(passport.initialize());
 consign()
     .then('./src/middlewares/cors.js') // anexar um arquivo
     .then('./src/api/usuarios.js')
+    .then('./src/api/auth.js')
     .then('./src/middlewares/passport.js')
     .then('./src/middlewares/routes.js')
     .into(app)

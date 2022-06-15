@@ -4,11 +4,16 @@ module.exports = app => {
         res.status(200).json("OK");
     })
 
+    app.post('/signin', app.src.api.auth.signin)
+    app.post('/validate', app.src.api.auth.validate)
+
     app.route('/usuarios')
+        .all(app.src.middlewares.passport.auth())
         .get(app.src.api.usuarios.list)      // listar
         .post(app.src.api.usuarios.save);    // salvar
 
     app.route('/usuarios/:id')
+        .all(app.src.middlewares.passport.auth())
         .get(() => {})                       // exibir um
         .put(app.src.api.usuarios.update)    // atualizar um
         .delete(() => {})                    // excluir um

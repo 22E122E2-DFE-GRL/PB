@@ -12,10 +12,13 @@ Content-Type: application/json
 ### 
 
 GET http://localhost:3001/usuarios
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjhkODA4MzMxMDhiM2U0YjNjMDA5MTgiLCJub21lIjoidGhpYWdvIiwiZW1haWwiOiJ0aGlAZ28uY29tIiwiaWF0IjoxNjU0NjQ4ODk2ODU1LCJleHAiOjE2NTQ2OTIwOTY4NTV9.1NGd4Y3wUyDfs4ZgX4Fzhre7-YOmk0uICTNeTMujA9g
+
 ### 
 
 POST http://localhost:3001/usuarios
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjhkODA4MzMxMDhiM2U0YjNjMDA5MTgiLCJub21lIjoidGhpYWdvIiwiZW1haWwiOiJ0aGlAZ28uY29tIiwiaWF0IjoxNjU0NjQ4ODk2ODU1LCJleHAiOjE2NTQ2OTIwOTY4NTV9.1NGd4Y3wUyDfs4ZgX4Fzhre7-YOmk0uICTNeTMujA9g
 
 {
     "nome": "Ciclano",
@@ -32,3 +35,20 @@ Content-Type: application/json
     "senha": "654321"
 }
 ### 
+
+POST http://localhost:3001/signin
+Content-Type: application/json
+
+{   
+    "email": "thi@go.com",
+    "senha": "654321"
+}
+
+### 
+
+POST http://localhost:3001/validate
+Content-Type: application/json
+
+{   
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjhkODA4MzMxMDhiM2U0YjNjMDA5MTgiLCJub21lIjoidGhpYWdvIiwiZW1haWwiOiJ0aGlAZ28uY29tIiwiaWF0IjoxNjU0NjQ4NzM5MTg0LCJleHAiOjE2NTQ2OTE5MzkxODR9.8qa2fvnyUIjrZhVubMsxmOCB-kNzNyFZWtdaW4UPIJ4"
+}
