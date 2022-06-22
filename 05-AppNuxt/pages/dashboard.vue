@@ -3,8 +3,8 @@
     <main>
       <h1>Dashboard</h1>
       <button @click="signin(user)">Logar</button>
-      {{ hasCurrentUser }}
-      {{ currentUser }}
+      <p>Tem alguém logado: {{ hasCurrentUser }}</p>
+      <p>Quem está logado: {{ currentUser }}</p>
     </main>
   </div>
 </template>
